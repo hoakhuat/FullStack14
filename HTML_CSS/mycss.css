@@ -1,0 +1,35 @@
+.menu {
+    background-color: #D5B0AC;
+    color: #402E2A;
+    font-weight: bold;
+    text-align: center;
+    line-height: 32px;
+}
+
+.menu span{
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 100px;
+}
+
+.submenu{
+    background-color: #D5B0AC;
+    display: none;
+    position: absolute;
+}
+
+span:hover{
+    color:  #FFFFFF;
+    background-color:  #9CD08F;
+    cursor: pointer;
+}
+
+.menu span:hover>.menu.submenu{
+    display: block;
+}
+
+.submenu span:hover>.menu.submenu{
+    display: inline-block;
+    margin-left: 28px;
+}
