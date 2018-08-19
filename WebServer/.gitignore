@@ -1,0 +1,5 @@
+# lưu những file k muốn gửi lên git
+node_modules
+app.js
+test.js
+test.txt
