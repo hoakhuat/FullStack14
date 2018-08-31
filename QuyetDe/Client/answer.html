@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Answer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+    <!-- <nav>
+        <a href="/ask.html">Hỏi nhanh</a>
+        <a href="/">Đáp gọn</a>
+    </nav>
+
+    <div class="question">
+        <h1></h1>
+        <h2><span></span>vote</h2>
+        <div>
+                <button class="answer" data-answer="no" data-id="">Sai / Không / Trái</button>
+                <button class="answer"  data-answer="yes" data-id="">Đúng / Có / Phải</button>
+        </div>
+        
+        <div>
+                <button>Xem kết quả</button>
+                <a href="/"><button>Câu hỏi khác </button></a>
+                
+        </div>
+    </div> -->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Quyết.đê!</a>
+                <button data-target="#item" class=" navbar-toggle" data-toggle="collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="item">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/ask">Hỏi nhanh</a>
+                    </li>
+                    <li class="active">
+                        <a href="/">Đáp gọn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row text-center" id="text_question">
+            <h1></h1>
+        </div>
+        <div class="row text-center" id="text_vote">
+            <h3></h3>
+        </div>
+        <div class="row">
+            <div id="question_result" class="col-xs-12 question_result" style="display : block">
+                <div class="result_bar" style="margin-left: 20%;">
+                    <div id="question_result_no" class="col-md-6" style="width: 47.62%;">
+                        47.62%
+                        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                    </div>
+                    <div id="question_result_yes"  class="col-md-6" style="width: 52.38%;">
+                        52.38%
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <form action="/" method="post">
+                <button type="submit" name="btn_xemcauhoikhac" value="xemcauhoikhac" class="btn btn-success btn-lg btn_xemcauhoikhac">Xem câu hỏi khác</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
