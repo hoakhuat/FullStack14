@@ -19,30 +19,12 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://localhost:6969/answer',
             method: 'PUT',
+            data: {
+                'answer': answer,
+                'id': questionId
+            },
             success: function (data) {
-                // let data = JSON.parse(fileData);
-                let yes = data[questionId - 1].yes;
-                let no = data[questionId - 1].no;
-                if (answer == 'yes') {
-                    yes++;
-                    console.log('yes' + yes);
-                } else {
-                    no++;
-                    console.log('no' + no);
-                }
-
-                $.post(
-                    'http://localhost:6969/answer',
-                    {
-                        id: questionId,
-                        yes: yes,
-                        no: no
-                    },
-                    function () {
-                        console.log("success");
-                    },
-                    'JSON'
-                )
+                console.log('success.')
             },
             error: function () {
                 console.log("error!");

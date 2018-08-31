@@ -76,20 +76,6 @@ app.get('/question', (req, res) => {
 })
 
 app.put('/answer', (req, res) => {
-    fs.readFile('./questions.txt', (err, fileData) => {
-        if (err) console.log(err)
-        else {
-            try {
-                let questions = JSON.parse(fileData);
-                res.send(questions);
-            } catch (error) {
-                console.log('Error!!!', error);
-            }
-        }
-    })
-});
-
-app.post('/answer', (req, res) => {
     let question = req.body;
     fs.readFile('./questions.txt', (err, fileData) => {
         if (err) console.log(err)
@@ -101,11 +87,15 @@ app.post('/answer', (req, res) => {
                     questions = JSON.parse(fileData);
                 }
                 
-                questions[question.id-1].yes = question.yes;
-                questions[question.id-1].no = question.no;
+                if(question.answer=='yes'){
+                    questions[question.id-1].yes++;
+                }else{
+                    questions[question.id-1].no++;
+                }
+                
                 fs.writeFile('./questions.txt', JSON.stringify(questions), (err) => {
                     if (err) console.log(err)
-                    else res.send(question);
+                    else res.send('http://localhost:8080');
                 });
             } catch (error) {
                 console.log("Error: ", error);
