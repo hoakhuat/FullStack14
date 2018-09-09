@@ -30,7 +30,7 @@ $(document).ready(function () {
           $('#voteYes').text(((data.question.yes / totalVote) * 100).toFixed(2));
           $('#voteNo').text(((data.question.no / totalVote) * 100).toFixed(2));
           $('.questionInfo').css('display', 'block');
-          $('.answer').css('display', 'none');
+          $('.answers').css('display', 'none');
         }
       },
       error: function (error) {
@@ -56,7 +56,7 @@ $(document).ready(function () {
             $('#voteNo').text(((data.question.no / totalVote) * 100).toFixed(2));
           }
           $('.questionInfo').css('display', 'block');
-          $('.answer').css('display', 'none');
+          $('.answers').css('display', 'none');
         }
       },
       error: function (error) {

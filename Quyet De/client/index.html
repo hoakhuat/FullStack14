@@ -1,47 +1,94 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+  <!-- slick : thay cho bootstrapcarorel -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Quyết đê</title>
-
-  <link rel="stylesheet" href="/css/main.css">
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/js/main.js"></script>
+  <style>
+    .row,
+    .container,
+    .questionInfo {
+      margin-top: 5rem;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <a href="/ask.html">Hỏi nhanh</a>
-    <a href="/">Đáp gọn</a>
-  </nav>
-  <div class="question">
-    <h1 id="questionContent"></h1>
-    <div class="answer">
-      <div>
-        <button data-id="" data-answer="no" class="answer">Sai / Không / Trái</button>
-        <button data-id="" data-answer="yes" class="answer">Đúng / Có / Phải</button>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Quyết.đê!</a>
       </div>
-      <div>
-        <button id="viewQuestionInfo">Xem kết quả</button>
-        <a href="/"><button>Câu hỏi khác</button></a>
-      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/ask.html">Hỏi nhanh</a>
+        </li>
+        <li class="active">
+          <a href="/">Đáp gọn</a>
+        </li>
+      </ul>
     </div>
-    <div class="questionInfo">
-      <div>
-        <span id="vote"></span> vote
+  </nav>
+
+  <div class="container">
+    <div class="question">
+      <h1 class="text-center" id="questionContent"></h1>
+      <div class="answers">
+        <div class="row text-center">
+          <div class="col-md-6">
+            <button data-id="" data-answer="no" class="answer btn btn-danger btn-lg">
+              <span class="glyphicon glyphicon-thumbs-down"></span> Sai / Không / Trái
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button data-id="" data-answer="yes" class="answer btn btn-primary btn-lg">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+              Đúng / Có / Phải
+            </button>
+          </div>
+        </div>
+        <div class="row text-center">
+          <button class="btn btn-default" id="viewQuestionInfo">Xem kết quả</button>
+          <a href="/">
+            <button class="btn btn-default">Câu hỏi khác</button>
+          </a>
+        </div>
       </div>
-      <div>
-        Vote yes: <span id="voteYes"></span>%
-      </div>
-      <div>
-        Vote no: <span id="voteNo"></span>%
-      </div>
-      <div>
-        <a href="/"><button>Câu hỏi khác</button></a>
+
+
+      <div class="questionInfo">
+        <div class="text-center">
+          <h3>
+            <span id="vote"></span> vote</h3>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width:40%" id="yes">
+              <span id="voteYes"></span>%
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+          </div>
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width:60%" id="no">
+              <span id="voteNo"></span>%
+              <span class="glyphicon glyphicon-thumbs-down"></span>
+          </div>
+        </div>
+        <div>
+          <a href="/">
+            <button>Câu hỏi khác</button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>
