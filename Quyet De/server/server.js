@@ -8,6 +8,12 @@ const QuestionModel = require('./models/questionModel');
 const QuestionRouter = require('./routers/questionRouter');
 
 let app = express();
+// mongoose.connect('mongodb://localhost/quyetde', (err) => {
+//   if(err) console.log("DB connect error!", err)
+//   else console.log("DB connect success!");
+// });
+
+
 mongoose.connect('mongodb://hoakhuat:hoa123456@ds237832.mlab.com:37832/quyet_de', (err) => {
   if (err) console.log('DB error')
   else console.log("DB connect successfully.")
@@ -96,7 +102,7 @@ app.put('/answer', (req, res) => {
   })
 });
 
-app.listen(6969, (err) => {
+app.listen(9999, (err) => {
   if (err) console.log(err)
-  else console.log("Server is listening at port 6969!");
+  else console.log("Server is listening at port 9999!");
 });
