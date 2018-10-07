@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Score Keeper</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <style>
+        tbody>tr:last-child th {
+            border-bottom: 1px solid #BF1363;
+        }
+
+        table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+table{
+    border-bottom: 1px solid;
+    border-bottom-color: #BF1363;
+}
+
+input[type="number"]{
+    border-radius: 7px;
+    border-color:lightgray;
+    border-style: ridge;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <header>
+            <h1><a href="/">Score Keeper</a></h1>
+        </header>
+        <div class="main" style="margin-top: 20px;">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Shounen A</th>
+                        <th>Shounen B</th>
+                        <th>Shounen C</th>
+                        <th>Shounen D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #BF1363; ">
+                        <td>Sum of Score (0)</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Round 1</td>
+                        <td><input type="number" /></td>
+                        <td><input type="number" /></td>
+                        <td><input type="number" /></td>
+                        <td><input type="number" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center">
+                <button class="btn btn-danger" id="add_round" style="background-color: #BF1363;">ADD ROUND</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

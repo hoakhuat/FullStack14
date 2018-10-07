@@ -1,0 +1,14 @@
+-users:
+   -username
+   -password
+   -name
+   -avatar
+   -gender
+-images:
+ - imgUrl
+ - views
+ -like
+ -owner
+ -caption
+ -comments
+ 
